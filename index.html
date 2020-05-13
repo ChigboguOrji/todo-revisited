@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta http-equiv="x-ua-compatible" content="IE=edge" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1" />
+    <title>Todo list front end application</title>
+    <link rel="stylesheet" href="./public/css/todos.css" />
+  </head>
+
+  <body class="home-page">
+    <div class="container">
+      <h1 class="name company-name">BRIGHTSIDE TECHNOLOGIES</h1>
+      <i class=""></i>
+      <h1 class="name project-name">SCHEDULE</h1>
+      <a href="./add-todo-items.html" class="">
+        <button type="button" class="home-btn">MANAGE SCHEDULES</button>
+      </a>
+    </div>
+
+    <div class="copy-right">
+      <small id="copy-right"></small>
+    </div>
+
+    <script>
+      window.onload = pVA;
+
+      function pVA() {
+        if ("sessionStorage" in window && sessionStorage.getItem("privacy")) {
+          console.log("agreed");
+          return;
+        } else {
+          console.log("Not agreed");
+          signPrivacy();
+        }
+      }
+
+      function signPrivacy() {
+        console.log("about to sign");
+
+        let container = document.createElement("section");
+        container.id = "priv-wrap";
+        container.style.cssText = `position:fixed; width: 100%; top:0;bottom:0;
+        background-color: rgb(2, 59, 2);color:rgb(245, 245, 245);z-index: 9999999999; text-align:center; padding: 150px 0 0`;
+
+        let wlc = `<h1 class="wlc-note-head">WELCOME TO BRIGHTSIDE TECHNOLOGIES<br />SCHEDULE APP</h1>`;
+        let msg = `<p class="priv-text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />
+        Perferendis, asperiores iure, eos nam quia voluptas inventore <br />
+        aliquam hic veritatis cum atque quisquam consequuntur ullam <br />
+        iste ex doloribus quidem adipisci magnam.</p>
+        `;
+        let btn = `
+        <p><button type="button" class="privBtn" id="yes">Accept</button>
+        <button type="button" class="privBtn" id="no">Reject</button></p>
+        `;
+
+        container.innerHTML = wlc;
+        container.innerHTML += msg;
+        container.innerHTML += btn;
+
+        document.body.appendChild(container);
+
+        window.onclick = function (e) {
+          let id = e.target.id;
+          if (id == "yes") {
+            sessionStorage.setItem("privacy", true);
+            window.location.reload(true);
+          } else if (id == "no") {
+            alert("To continue to page,\n you must accept our privacy terms");
+          } else {
+            return false;
+          }
+        };
+      }
+
+      let date = new Date().getFullYear();
+      document.getElementById("copy-right").innerHTML =
+        "&copy; " + date + " brightside technologies";
+      // setInterval(() => {
+      //   let getPri = sessionStorage.getItem("privacy");
+      //   if (!getPri) return;
+      //   sessionStorage.removeItem("privacy");
+      // }, 9e9);
+    </script>
+  </body>
+</html>

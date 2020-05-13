@@ -1,0 +1,51 @@
+<html lang="en-US">
+  <head>
+    <meta http-equiv="x-ua-compatible" content="IE=edge" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1" />
+    <title>All todo items</title>
+    <link rel="stylesheet" href="./public/fontawesome-free-5.9.0-web/css/all.min.css" />
+    <link rel="stylesheet" href="./public/css/todo-css.css" />
+    <script src="./public/js/all-todo.js" defer></script>
+  </head>
+
+  <body>
+    <header role="banner">
+      <nav>
+        <div class="nav-left">
+          <a href="./index.html" class="site-link name">
+            <h1 class="name">schedule</h1>
+          </a>
+        </div>
+
+        <div class="nav-right">
+          <a href="./add-todo-items.html" class="site-link" title="New schedule">
+            <button type="button">New schedule</button>
+          </a>
+          <a href="./all-todo-items.html" class="site-link" title="All schedules">
+            <button type="button">All schedules</button>
+          </a>
+
+          <a href="#!" class="site-link" title="Notification">
+            <button type="button">
+              <i class="fas fa-bell fa-sm">
+                <small><sup id="item-count">0</sup></small>
+              </i>
+            </button>
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="todo-list-container">
+          <div style="padding: 20px;">
+            <h1 style="text-align: center;">My todo item</h1>
+          </div>
+        <div id="todo-item-container">
+          <ul id="output-items"></ul>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

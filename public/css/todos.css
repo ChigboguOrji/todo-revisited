@@ -1,0 +1,98 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  transition: all 0.3s linear;
+  font-kerning: normal;
+}
+
+html,
+body.home-page {
+  height: 100%;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+    sans-serif;
+  background: -moz-linear-gradient(to top, rgb(2, 59, 2), rgb(2, 59, 2), rgb(122, 95, 6));
+  background: -webkit-linear-gradient(to top, rgb(2, 59, 2), rgb(2, 59, 2), rgb(122, 95, 6));
+  background: linear-gradient(to top, rgb(2, 59, 2), rgb(2, 59, 2), rgb(122, 95, 6));
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  line-height: 2;
+  overflow: hidden !important;
+}
+
+.container {
+  width: 70%;
+  margin: auto;
+  padding: 200px 0;
+  text-align: center;
+  background: -moz-radial-gradient(at center, rgb(122, 95, 6), rgb(2, 59, 2));
+  background: -webkit-radial-gradient(at center, rgb(122, 95, 6), rgb(2, 59, 2));
+  background: radial-gradient(at center, rgb(122, 95, 6), rgb(2, 59, 2));
+}
+
+.name {
+  font-weight: bold;
+  font-size: 60px;
+  color: whitesmoke;
+  text-shadow: 0 2px 4px #333;
+}
+
+.company-name {
+  transform: scale(0.5);
+}
+
+.project-name {
+  transform: scale(1.5);
+  text-shadow: 0 2px 4px #333;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.home-btn {
+  padding: 15px 30px;
+  margin-top: 20px;
+  cursor: pointer;
+  font-family: inherit;
+  border: 1px solid whitesmoke;
+  background: radial-gradient(at center, rgb(122, 95, 6), rgb(2, 59, 2));
+  color: whitesmoke;
+  font-weight: bolder;
+  border-radius: 3px;
+}
+
+.home-btn:hover {
+  /* box-shadow: 0 8px 16px 0 #000; */
+  background: radial-gradient(at top right, rgb(122, 95, 6), rgb(2, 59, 2));
+}
+
+.copy-right {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  color: whitesmoke;
+}
+
+/* privacy wrapper */
+.wlc-note-head {
+  color: rgb(202, 157, 9);
+  text-shadow: 0 1px 2px #000;
+}
+
+.privBtn {
+  padding: 10px 20px;
+  margin-top: 30px;
+  cursor: pointer;
+  border: 1px solid #d7d7d7;
+  border-radius: 3px;
+  box-shadow: 0 4px 8px 0 #000;
+  background-color: rgb(122, 95, 6);
+}
+
+.privBtn:hover {
+  background-color: rgb(245, 245, 245);
+  box-shadow: none;
+}

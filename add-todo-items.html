@@ -1,0 +1,88 @@
+<html lang="en-US">
+
+  <head>
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1">
+    <title>Add todo items</title>
+    <link rel="stylesheet" href="./public/fontawesome-free-5.9.0-web/css/all.min.css">
+    <link rel="stylesheet" href="./public/css/todo-css.css">
+    <script src="./public/js/add-todo.js" defer></script>
+  </head>
+
+  <body>
+    <header role="banner">
+      <nav>
+        <div class="nav-left">
+          <a href="./index.html" class="site-link name">
+            <h1 class="name">schedule</h1>
+          </a>
+        </div>
+
+        <div class="nav-right">
+          <a href="./add-todo-items.html" class="site-link" title="New schedule">
+            <button type="button">New schedule</button>
+          </a>
+          <a href="./all-todo-items.html" class="site-link" title="All schedules">
+            <button type="button">All schedules</button>
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    </section>
+
+    <main>
+      <section class="container">
+        <form action="#!" method="POST" id="new-item-form">
+          <fieldset>
+            <legend>
+              <h3>make schedules</h3>
+            </legend>
+
+            <div class="input-group">
+              <label for="title" class="header">Schedules&#39; title</label>
+              <input type="text" name="title" id="title" placeholder="Title" class="form-control-input">
+            </div>
+
+            <div class="input-group">
+              <label for="task" class="header">Schedules&#39; objective</label>
+              <textarea name="task" id="task" value="task" placeholder="Task" class="form-control-input"></textarea>
+
+            </div>
+
+            <div class="input-group">
+              <label for="deadLine" class="header">Schedules&#39; due date</label>
+              <div class="when-input">
+                <input type="text" name="year" id="year" value="2019" placeholder="Year" class="form-control-input date-input">
+                <input type="text" name="month" id="month" value="1" placeholder="Month" class="form-control-input date-input">
+                <input type="text" name="day" id="day" value="25" placeholder="Day" class="form-control-input date-input">
+              </div>
+            </div>
+
+            <div class="input-group">
+              <label class="header">Schedules&#39; importance</label>
+              <label class="set-importance">
+                <input type="radio" name="importance" value="very important"> Very important
+              </label>
+              <label class="set-importance">
+                <input type="radio" name="importance" value="important" checked aria-checked="true"> Important
+              </label>
+              <label class="set-importance">
+                <input type="radio" name="importance" value="not important"> Not important
+              </label>
+            </div>
+
+            <div class="input-group">
+              <button type="submit" class="submit-btn">
+                <i class="fas fa-plus fa-sm"></i>
+                add schedule
+              </button>
+            </div>
+          </fieldset>
+        </form>
+      </section>
+    </main>
+  </body>
+
+</html>
